@@ -41,7 +41,7 @@
             flex: 5;
         }
 
-        .panel .image-text {
+        .panel .img-text {
             position: absolute;
             color: white;
             bottom: 30px;
@@ -50,10 +50,9 @@
             transition: opacity 0.3s ease-in;
         }
 
-        .panel.active .image-text {
+        .panel.active .img-text {
             opacity: 1;
         }
-
     </style>
 </head>
 
@@ -61,44 +60,48 @@
 
     <div class="container">
 
-        <div class="panel active"  id="panel-1" style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?w=1350');">
-            <h3 class="image-text">First image</h3>
+        <div class="panel active" id="panel-1"
+            style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?w=1350');">
+            <h3 class="img-text">Explore the world</h3>
         </div>
 
-        <div class="panel" id="panel-2" style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?w=1350');">
-            <h3 class="image-text">Second image</h3>
+        <div class="panel" id="panel-2"
+            style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?w=1350');">
+            <h3 class="img-text">Wild Forest</h3>
         </div>
 
-        <div class="panel" id="panel-3"style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1350');">
-            <h3 class="image-text">Third image</h3>
+        <div class="panel" id="panel-3"
+            style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1353');">
+            <h3 class="img-text">City on Winter</h3>
         </div>
 
-        <div class="panel" id="panel-4" style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?w=1350');">
-            <h3 class="image-text">Fourth image</h3>
+        <div class="panel" id="panel-4"
+            style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?w=1351');">
+            <h3 class="img-text">Mountain Cloud</h3>
         </div>
 
-        <div class="panel" id="panel-5" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=1350');">
-            <h3 class="image-text">Fifth image</h3>
+        <div class="panel" id="panel-5"
+            style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=1350');">
+            <h3 class="img-text">Sunny Beach</h3>
         </div>
 
     </div>
 
     <script>
-
         const panels = document.querySelectorAll(".panel");
 
         panels.forEach((panel) => {
             panel.addEventListener("click", () => {
+
                 panels.forEach((p) => {
                     p.classList.remove("active");
                 });
+
                 panel.classList.add("active");
-
             });
-
         });
-
     </script>
 
 </body>
 </html>
+
